@@ -13,7 +13,6 @@ public class Sorter {
 	public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
 		
 		for (int i = 0; i < list.getSize() - 1; i++) {
-			
 			for (int j = i+1; j < list.getSize(); j++) {
 				if (list.getElement(j).compareTo(list.getElement(i)) == -1) {
 					list.swapElements(i, j);
@@ -32,6 +31,7 @@ public class Sorter {
 	 */
 	public static <T extends Comparable<T>> void insertionSort(ISimpleList<T> list) {
 		
+
 	}
 
 	/**
@@ -43,6 +43,14 @@ public class Sorter {
 	 *             in the end
 	 */
 	public static <T extends Comparable<T>> void bubbleSort(ISimpleList<T> list) {
+
+		for (int i = 0; i < list.getSize(); i++) {
+			for (int j = 0; j < list.getSize() - 1; j++) {
+				if (list.getElement(j).compareTo(list.getElement(j+1)) == 1) {
+					list.swapElements(i, j);
+				}
+			}
+		}
 		
 	}
 }
