@@ -47,7 +47,7 @@ public class Sorter {
 		for (int i = 0; i < list.getSize(); i++) {
 			for (int j = 0; j < list.getSize() - 1; j++) {
 				if (list.getElement(j).compareTo(list.getElement(j+1)) == 1) {
-					list.swapElements(i, j);
+					list.swapElements(j, j+1);
 				}
 			}
 		}

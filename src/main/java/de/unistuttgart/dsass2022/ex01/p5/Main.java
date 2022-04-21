@@ -14,7 +14,7 @@ public class Main {
 		SimpleList<Integer> myList = new SimpleList<>();
 		
 		myList.append(9);
-		myList.append(6);
+		myList.append(4);
 		myList.append(3);
 		myList.append(8);
 		myList.append(7);
