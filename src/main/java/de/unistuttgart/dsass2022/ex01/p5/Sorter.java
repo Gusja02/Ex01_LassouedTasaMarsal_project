@@ -12,10 +12,10 @@ public class Sorter {
 	 */
 	public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
 		
-		for (int i = list.getSize() - 1; i >= 0; i--) {
+		for (int i = 0; i < list.getSize() - 1; i++) {
 			
-			for (int j = list.getSize() - 2; j >= 0; j--) {
-				if (list.getElement(j).compareTo(list.getElement(i)) == 1) {
+			for (int j = i+1; j < list.getSize(); j++) {
+				if (list.getElement(j).compareTo(list.getElement(i)) == -1) {
 					list.swapElements(i, j);
 				}
 			}

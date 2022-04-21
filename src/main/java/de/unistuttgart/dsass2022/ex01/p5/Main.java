@@ -17,15 +17,6 @@ public class Main {
 		myList.append(2);
 		myList.append(3);
 		
-		for (int i = 0; i < myList.getSize() - 1; i++) {
-			
-			for (int j = i+1; j < myList.getSize(); j++) {
-				if (myList.getElement(j).compareTo(myList.getElement(i)) == -1) {
-					myList.swapElements(i, j);
-				}
-			}
-		}
-		
 		for (int i = 0; i < myList.getSize(); i++) {
 			System.out.println(myList.getElement(i));
 		}
