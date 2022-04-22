@@ -1,5 +1,6 @@
 package de.unistuttgart.dsass2022.ex01.p5;
 
+import java.util.List;
 
 /** 
  * Nur zum testen
@@ -11,42 +12,47 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		SimpleList<Integer> myList = new SimpleList<>();
+		SimpleList<Integer> list = new SimpleList<>();
 		
-		myList.append(9);
-		myList.append(4);
-		myList.append(3);
-		myList.append(8);
-		myList.append(7);
-		myList.append(6);
-		myList.append(1);
-		myList.append(5);
-		myList.append(2);
-		myList.append(0);
+		list.append(0);
+		list.append(4);
+		list.append(3);
+		list.append(8);
+		list.append(7);
+		list.append(6);
+		list.append(1);
+		list.append(5);
+		list.append(2);
+		list.append(9);
 
 
 		// SelectionSort
-/* 		for (int i = 0; i < myList.getSize() - 1; i++) {
-			for (int j = i+1; j < myList.getSize(); j++) {
-				if (myList.getElement(j).compareTo(myList.getElement(i)) == -1) {
-					myList.swapElements(i, j);
+/* 		for (int i = 0; i < list.getSize() - 1; i++) {
+			for (int j = i+1; j < list.getSize(); j++) {
+				if (list.getElement(i).compareTo(list.getElement(j)) == -1) {
+					list.swapElements(i, j);
 				}
 			}
-		}
- */
+		} */
+
 
 		// BubbleSort
-		for (int i = 0; i < myList.getSize(); i++) {
-			for (int j = 0; j < myList.getSize() - 1; j++) {
-				if (myList.getElement(j).compareTo(myList.getElement(j+1)) == 1) {
-					myList.swapElements(j, j+1);
+		for (int i = 0; i < list.getSize(); i++) {
+			for (int j = 0; j < list.getSize() - 1; j++) {
+				if (list.getElement(j).compareTo(list.getElement(j+1)) == -1) {
+					list.swapElements(j, j+1);
 				}
 			}
 		}
 
+		// InsertionSort
 
-		for (int i = 0; i < myList.getSize(); i++) {
-			System.out.println(myList.getElement(i));
+
+		/**
+		 * list output
+		 */
+		for (int i = 0; i < list.getSize(); i++) {
+			System.out.println(list.getElement(i));
 		}
 
 	}
